@@ -97,6 +97,29 @@ Optimization & Visualization
 </div>
 </details>
 
+
+<details>
+<summary>Path Planning (RRT)</summary>
+<p><em>Interactive simulation of the Rapidly-exploring Random Tree algorithm</em></p>
+
+**Features:**
+- Obstacle-aware path planning
+- Configurable step size & goal bias
+- Real-time tree growth visualization
+- Extracted final path with highlighted waypoints
+
+<div align="center">
+
+<a href="4-path-planning" target="_blank">
+  <img src="4-path-planning/screenshots/run.gif" width="250"/>
+</a>
+
+> Click the image to checkout the project.
+
+</div>
+
+</details>
+
 ---
 
 ## Quick Start
