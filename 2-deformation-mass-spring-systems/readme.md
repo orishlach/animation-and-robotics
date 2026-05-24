@@ -1,18 +1,16 @@
-# Animation and Robotics - Assignment 2: <br> Deformation (Mass-Spring systems)
+# Deformation (Mass-Spring systems)
 
 <details>
-<summary> Click here to read more
-
-**Introduction**
+<summary>
+Introduction
 </summary>
 
-A mass-spring system is one of the simplest models for an elastic object, yet implementing a simulator for such a system provides a solid foundation for understanding more complex models. Most simulators rely on the same building blocks regardless of the model, making the transition to sophisticated models more about changing a few formulas.
-
-In this assignment, you will implement a static mass-spring system simulation. Static here means the simulator will only compute the steady-state, motionless configuration. You will learn about the common classes used in simulation and create a minimal GUI for interacting with the simulator.
-
-The initial code for the assignment comes with a few basic classes to help you organize. These types of classes are commonly found in simulator code, but other structures and variation exist. They are roughly divided to classes that are related to the definition of the mesh and its energies, and the solver, also called optimizer. If you inspect the code, you will see a class called `FEMMesh`, which stores the topology of the mesh and its rest pose X and can compute the energy (and gradient and Hessian) given a deformed pose x. The energy is computed by itereating over all of the elements (edge, triangles, etc.) and summing up all of their energies. The computation of energy of each element are delegated to a different class which inherits from an abstract ElementEnergy class. Instances of this class are expected to implement an `energy` method, and can optionally implement a gradient and Hessian methods. If the gradient and Hessian are not implemented, the computation fallsback on the base class' finite difference computation.
-
-The solver is comprized of several methods. The most front-facing one is `optimize`, which iteratively calls `step` to improve the solution. `step` consists of a `SearchDirection` method, and a `LineSearch` method, both of which point to one of several options. In our case, `GradientDescent` and `Newton` are implemented for the `SearchDirection` and only `BacktrackingLineSearch` is implemented for the line search. The compute the search direction, the solver simply calls the energy, gradient and Hessian methods of the FEMMesh class, and updates the deformed pose accordingly, using the line search function to insure a decrease in every iteration.
+A mass-spring system is one of the simplest models for an elastic object, yet implementing a simulator for such a system provides a solid foundation for understanding more complex models.<br>Most simulators rely on the same building blocks regardless of the model, making the transition to sophisticated models more about changing a few formulas.
+<br>In this assignment, you will implement a static mass-spring system simulation.<br>Static here means the simulator will only compute the steady-state, motionless configuration.<br>You will learn about the common classes used in simulation and create a minimal GUI for interacting with the simulator.
+<br><br>
+The initial code for the assignment comes with a few basic classes to help you organize.<br>These types of classes are commonly found in simulator code, but other structures and variation exist.<br>They are roughly divided to classes that are related to the definition of the mesh and its energies, and the solver, also called optimizer.<br>If you inspect the code, you will see a class called `FEMMesh`, which stores the topology of the mesh and its rest pose X and can compute the energy (and gradient and Hessian) given a deformed pose x.<br>The energy is computed by itereating over all of the elements (edge, triangles, etc.) and summing up all of their energies.<br>The computation of energy of each element are delegated to a different class which inherits from an abstract ElementEnergy class.<br>Instances of this class are expected to implement an `energy` method, and can optionally implement a gradient and Hessian methods.<br>If the gradient and Hessian are not implemented, the computation fallsback on the base class' finite difference computation.
+<br><br>
+The solver is comprized of several methods.<br>The most front-facing one is `optimize`, which iteratively calls `step` to improve the solution.<br>`step` consists of a `SearchDirection` method, and a `LineSearch` method, both of which point to one of several options.<br>In our case, `GradientDescent` and `Newton` are implemented for the `SearchDirection` and only `BacktrackingLineSearch` is implemented for the line search. The compute the search direction, the solver simply calls the energy, gradient and Hessian methods of the FEMMesh class, and updates the deformed pose accordingly, using the line search function to insure a decrease in every iteration.
 </details>
 
 ## Tasks
@@ -96,9 +94,6 @@ Example with <code>r = 0.01</code>
 </figure>
 </details>
 
-
----
-
 ### Task 3: Test the optimization pipeline
 
 <details>
@@ -118,9 +113,7 @@ Due to the rapid convergence of the methods, a single iteration was sufficient t
 | **C** | Gradient Descent     | SpringEnergy            | 7910.613100     | 263.817378      | 1.000000          | Significant jump | Deformation was chaotic, indicating energy trying to preserve rest lengths. |
 | **D** | Newton's Method      | SpringEnergy            | 30719.999005    | 551.224628      | 0.500000          | Moderate change  | Fast convergence but deformation exaggerated; more chaotic.                |
 
-</details>
-
---- 
+</details> 
 
 <details>
 
