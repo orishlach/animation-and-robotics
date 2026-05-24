@@ -22,8 +22,6 @@
 > - This repository contains **3 comprehensive projects**,<br> exploring the fundamental computational methods used in *animation and robotics*.
 > - Each project combines theoretical foundations with **interactive GUI** implementations,<br> allowing real-time parameter manipulation and immediate visual feedback.
 
----
-
 ## Projects
 
 <details>
@@ -117,7 +115,6 @@ Optimization & Visualization
 > Click the image to checkout the project.
 
 </div>
-
 
 ## Quick Start
 
