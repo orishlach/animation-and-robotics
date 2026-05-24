@@ -55,8 +55,6 @@ Where:
 </figure>
 </details>
 
----
-
 ### Task 2: Optimize
 <details>
 <summary> Subsection 2.1
@@ -98,7 +96,6 @@ This simplifies the evaluation and avoids unintended path creation during optimi
 
 </details>
 
----
 
 ### Task 3: Evaluate
 
