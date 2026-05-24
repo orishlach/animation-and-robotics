@@ -19,10 +19,12 @@ This report presents the implementation of the **Rapidly-exploring Random Tree (
 ## Task 1: Complete the GUI
 
 <details>
-<summary> 
-1.1: Setting Start/Goal Points and Tree Reset
-</summary>
-      
+<summary> Subsection 1.1
+
+**Setting Start/Goal Points and Tree Reset**
+
+</summary>  
+
 The GUI provides an intuitive click-based system for setting source and destination points:
 - *Left Click Toggle System*: Alternates between setting source (green marker) and destination (red marker)
 - *Visual Markers*: Green circle for source, red circle for destination with z-offset for visibility
@@ -36,9 +38,11 @@ The GUI provides an intuitive click-based system for setting source and destinat
 </details>
 
 <details>
-<summary> 
-1.2: Interactive Obstacle Drawing Tool
-</summary>
+<summary> Subsection 1.2
+
+**Interactive Obstacle Drawing Tool**
+
+</summary> 
       
 I implemented a Paint-like obstacle editor with multiple interaction methods:
 - *Right-Click Drawing*: Toggle obstacles with circular brush (radius = 10 pixels)
@@ -60,9 +64,12 @@ Interaction Methods:
 </details>
 
 <details>
-<summary> 
-1.3: Additional Visualization Features
-</summary>
+<summary> Subsection 1.3
+
+**Additional Visualization Features**
+
+</summary> 
+
 The visualization system provides clear visual feedback for all algorithm stages:
 
 - *Tree Visualization*: Blue lines showing RRT edges with 2px width
@@ -86,9 +93,11 @@ The visualization system provides clear visual feedback for all algorithm stages
 ## Task 2: Implement RRT
 
 <details>
-<summary> 
-2.1: getNextSample Implementation
-</summary>
+<summary> Subsection 2.1
+
+**`getNextSample()` Implementation**
+
+</summary> 
 
 The `getNextSample` function extends the tree by creating a new node at a fixed `stepSize` distance from the nearest existing node toward a randomly sampled point.
 
@@ -105,9 +114,12 @@ The new node position is calculated as: <code>x<sub>new</sub> = x<sub>near</sub>
 </details>
 
 <details>
-<summary> 
-2.2: Collision Function Implementation
-</summary>
+
+<summary> Subsection 2.2
+
+**Collision Function Implementation**
+
+</summary> 
 
 The collision detection function uses line discretization to check if a straight-line path between two points intersects with any obstacles. The line is sampled at pixel-level resolution to ensure no obstacles are missed.
 
@@ -130,9 +142,11 @@ Testing collision detection with known obstacle configurations:
 </details>
 
 <details>
-<summary> 
-2.3: Algorithm Termination Criteria
-</summary>
+<summary> Subsection 2.3
+
+**Algorithm Termination Criteria**
+
+</summary> 
 
 The algorithm uses a proximity-based stopping condition with collision verification:
 
@@ -148,9 +162,12 @@ The goal is considered reached when:
 </details>
 
 <details>
-<summary> 
-2.4: Full RRT Execution
-</summary>
+
+<summary> Subsection 2.4
+
+**Full RRT Execution**
+
+</summary> 
 
 Experiment Setup:
 
@@ -170,9 +187,11 @@ Results:
 </details>
 
 <details>
-<summary> 
-2.5: Extracting and Visualizing the Solution Path
-</summary>
+<summary> Subsection 2.5
+
+**Extracting and Visualizing the Solution Path**
+
+</summary> 
 
 The path is extracted by backtracking through parent pointers from goal to start:
 
@@ -193,9 +212,12 @@ Visualization Method:
 ## Task 3: Experimental Results
 
 <details>
-<summary> 
-Experiment 1: Effect of Step Size on Performance
-</summary>
+<summary> Experiment 1
+
+**Effect of Step Size on Performance**
+
+</summary> 
+
 Tested various step sizes on the same obstacle configuration with fixed start/goal positions.<br>
 Each configuration was run 10 times to account for randomness.
 <br><br>
@@ -218,9 +240,11 @@ Analysis:
 </details>
 
 <details>
-<summary> 
-Experiment 2: Comprehensive Performance Analysis
-</summary>
+<summary> Experiment 2
+
+**Comprehensive Performance Analysis**
+
+</summary> 
 
 - Identified Strengths:
   - *Probabilistic Completeness*: Given enough iterations, RRT will find a path if one exists
