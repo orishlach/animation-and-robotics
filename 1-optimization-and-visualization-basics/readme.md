@@ -1,16 +1,14 @@
-# Animation and Robotics - Assignment 1: <br> 
-## Optimization and Visualization Basics
+# Optimization and Visualization Basics
 
 
 <details> 
 
-<summary> Click here to read more
-
-**Introduction**
-
+<summary>
+Introduction
 </summary>
-Both animation and robotics heavily rely on optimization algorithms. In order to understand what is happening inside the optimizer, and to debug efficiently, we must emply *interactive* visualization technique. Interactive means that it is possible to change parameters during runtime and see the change in result immediately, without having to stop, edit, and run again.
-In this introductory assignment you will experiment with basic optimization and visualization techniques. The goal is to introduce you an important, different way of coding that is geared toward interactive techniques. This will be important in the rest of the class.
+
+Both animation and robotics heavily rely on optimization algorithms.<br>In order to understand what is happening inside the optimizer, and to debug efficiently, we must emply *interactive* visualization technique.<br>Interactive means that it is possible to change parameters during runtime and see the change in result immediately, without having to stop, edit, and run again.<br>
+In this introductory assignment you will experiment with basic optimization and visualization techniques.<br>The goal is to introduce you an important, different way of coding that is geared toward interactive techniques.
 
 </details>
 
