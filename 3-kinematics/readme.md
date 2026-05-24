@@ -1,9 +1,8 @@
-# Animation and Robotics - Assignment 3: <br> Kinematics
+# Kinematics
 
 <details>
-<summary> Click here to read more
-
-**Introduction**
+ <summary>
+Introduction
 </summary>
 
 In this assignment, you will implement a simple optimization based inverse kinematics application for a 2D robotic arm with hinge joints. 
@@ -53,10 +52,6 @@ I modified the `FK` function to calculate FK for n-links:
 </figure>
 
 </details>
-
----
-
-
 
 ### Task 2: Gradient descent based IK (the Jacobian transpose method)
 
@@ -127,10 +122,6 @@ Additionally, their size changes according to the result of the Jacobian calcula
 
 The gradient value shown in the graph reflects the optimization process.
 </details>
-
-
----
-
 
 ### Task 3: Gauss-Newton based IK (the Jacobian inverse method)
 
